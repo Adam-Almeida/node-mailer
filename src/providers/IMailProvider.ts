@@ -14,4 +14,4 @@ interface IMailProvider{
   sendMail(message: IMessage):Promise<void>;
 }
 
-export { IMailProvider };
+export { IMailProvider, IMessage };

@@ -12,7 +12,7 @@ class CreateUserUseCase{
     async execute(data: ICreateUserDTO){
       const userAlreadyExists = this.userRepository.findByEmail(data.email);
 
-      if(userAlreadyExists){
+      if(!userAlreadyExists){
         throw new Error("User Already Exists.")
       }
 
